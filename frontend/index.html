@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>센서 진단 시스템</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>6축 센서 데이터 진단 시스템</h1>
+        
+        <div class="upload-section">
+            <h2>CSV 파일 업로드</h2>
+            <input type="file" id="csvFile" accept=".csv">
+            <button onclick="uploadCSV()">업로드</button>
+            <div id="uploadStatus"></div>
+        </div>
+        
+        <div class="diagnosis-section" style="display:none;">
+            <h2>진단 결과</h2>
+            <div id="diagnosisResult"></div>
+        </div>
+        
+        <div class="chat-section" style="display:none;">
+            <h2>진단 상담</h2>
+            <div id="chatMessages"></div>
+            <input type="text" id="chatInput" placeholder="질문을 입력하세요...">
+            <button onclick="sendMessage()">전송</button>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
